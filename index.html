@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mizan - Authentic Halal Pizza</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#38323a',
+secondary: '#e08c27',
+text: '#f6e8d3',
+accent: '#a92f1f'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.font-cinzel { font-family: 'Cinzel', serif; }
+.font-raleway { font-family: 'Raleway', sans-serif; }
+</style>
+</head>
+<body class="font-raleway bg-white">
+<nav class="fixed w-full bg-primary/95 backdrop-blur-sm z-50 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-[90px]">
+<div class="flex items-center py-2">
+<a href="#" class="flex items-center">
+<img src="https://static.readdy.ai/image/5f56a9a4730657acb0a78d0d0a0af86c/5e3aa51b5ae036b3f03111a2f86c473c.png" alt="Mizan Logo" class="h-[80px]">
+</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#menu" class="text-text hover:text-secondary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-secondary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Menu</a>
+<a href="#about" class="text-text hover:text-secondary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-secondary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">About</a>
+<a href="#catering" class="text-text hover:text-secondary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-secondary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Catering</a>
+<a href="#contact" class="text-text hover:text-secondary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-secondary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Contact</a>
+<button class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap transform hover:scale-105 active:scale-95">Order Now</button>
+</div>
+<div class="md:hidden flex items-center">
+<button id="mobile-menu-button" class="text-text w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-2x"></i>
+</button>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-primary transform transition-transform duration-300 origin-top">
+<div class="px-2 pt-2 pb-3 space-y-1">
+<a href="#menu" class="block px-3 py-2 text-text hover:bg-secondary/20 rounded transition-all duration-300">Menu</a>
+<a href="#about" class="block px-3 py-2 text-text hover:bg-secondary/20 rounded transition-all duration-300">About</a>
+<a href="#catering" class="block px-3 py-2 text-text hover:bg-secondary/20 rounded transition-all duration-300">Catering</a>
+<a href="#contact" class="block px-3 py-2 text-text hover:bg-secondary/20 rounded transition-all duration-300">Contact</a>
+<button class="w-full bg-secondary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap mt-2 transform hover:scale-105 active:scale-95">Order Now</button>
+</div>
+</div>
+</nav>
+<header class="relative pt-16 h-screen">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/8e63e3cdbff778f7029bed29d876e6af.jpg')"></div>
+<div class="absolute inset-0 bg-black/50"></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+<div class="text-center">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-cinzel font-bold text-white mb-6">Authentic Halal Pizza, Unmatched Flavor!</h1>
+<p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">Experience the perfect blend of authentic flavors and halal ingredients, crafted with passion in the heart of Ballwin Manchester.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-secondary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition duration-300 whitespace-nowrap text-lg font-semibold">Order Now</button>
+<button class="bg-accent text-text px-8 py-3 !rounded-button hover:bg-opacity-90 transition duration-300 whitespace-nowrap text-lg font-semibold">View Menu</button>
+</div>
+</div>
+</div>
+</header>
+<section id="about" class="py-20 bg-text">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-cinzel font-bold text-primary mb-6">Our Story</h2>
+<p class="text-gray-700 mb-6">At Mizan, we believe in the power of authentic flavors and quality ingredients. Since 2018, we've been serving the Ballwin Manchester community with 100% halal pizzas that combine traditional recipes with modern creativity.</p><p class="text-gray-700 mb-6">Every pizza is crafted with care using fresh, locally-sourced ingredients and prepared according to halal standards. Our commitment to quality and authenticity has made us a trusted name in halal dining.</p>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-secondary ri-2x"></i>
+<span class="text-gray-700">100% Halal Certified</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-secondary ri-2x"></i>
+<span class="text-gray-700">Fresh Ingredients</span>
+</div>
+</div>
+</div>
+<div class="relative h-[400px] rounded-lg overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/5a8404cd9b4b7f90cb28c648357da7d0.jpg" alt="About Mizan" class="w-full h-full object-cover">
+</div>
+</div>
+</div>
+</section>
+<section id="menu" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-cinzel font-bold text-primary mb-4">Menu Coming Soon</h2>
+<p class="text-gray-700">We're preparing something special for you</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+<div class="bg-text rounded-lg p-6 text-center">
+<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+<i class="ri-restaurant-line text-secondary ri-3x"></i>
+</div>
+<h3 class="text-xl font-cinzel font-bold text-primary mb-2">Pizza</h3>
+<p class="text-gray-700">Authentic halal pizzas with premium toppings</p>
+</div>
+<div class="bg-text rounded-lg p-6 text-center">
+<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+<i class="ri-tools-line text-secondary ri-3x"></i>
+</div>
+<h3 class="text-xl font-cinzel font-bold text-primary mb-2">Customization Options</h3>
+<p class="text-gray-700">Create your perfect pizza</p>
+</div>
+<div class="bg-text rounded-lg p-6 text-center">
+<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+<i class="ri-restaurant-2-line text-secondary ri-3x"></i>
+</div>
+<h3 class="text-xl font-cinzel font-bold text-primary mb-2">Side Dishes</h3>
+<p class="text-gray-700">Perfect companions for your pizza</p>
+</div>
+<div class="bg-text rounded-lg p-6 text-center">
+<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+<i class="ri-cup-line text-secondary ri-3x"></i>
+</div>
+<h3 class="text-xl font-cinzel font-bold text-primary mb-2">Beverages</h3>
+<p class="text-gray-700">Refreshing drinks selection</p>
+</div>
+<div class="bg-text rounded-lg p-6 text-center">
+<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+<i class="ri-cake-3-line text-secondary ri-3x"></i>
+</div>
+<h3 class="text-xl font-cinzel font-bold text-primary mb-2">Desserts</h3>
+<p class="text-gray-700">Sweet treats to complete your meal</p>
+</div>
+<div class="bg-text rounded-lg p-6 text-center">
+<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+<i class="ri-truck-line text-secondary ri-3x"></i>
+</div>
+<h3 class="text-xl font-cinzel font-bold text-primary mb-2">Delivery and Takeout</h3>
+<p class="text-gray-700">Convenient ordering options</p>
+</div>
+</div>
+<div class="text-center mt-12">
+<p class="text-gray-700 mb-4">Our full menu will be available soon with these exciting options</p>
+<button class="bg-secondary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Get Notified When Available</button>
+</div>
+</div>
+</section>
+<section id="catering" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-cinzel font-bold text-primary mb-4">Catering Services</h2>
+<p class="text-gray-700">Let us cater your next event with our delicious halal pizzas</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-gray-50 p-8 rounded-lg text-center">
+<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+<i class="ri-group-line text-secondary ri-3x"></i>
+</div>
+<h3 class="text-xl font-cinzel font-bold text-primary mb-4">Corporate Events</h3>
+<p class="text-gray-700">Perfect for meetings, conferences, and office parties</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg text-center">
+<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+<i class="ri-heart-line text-secondary ri-3x"></i>
+</div>
+<h3 class="text-xl font-cinzel font-bold text-primary mb-4">Private Parties</h3>
+<p class="text-gray-700">Celebrate special occasions with our catering service</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg text-center">
+<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+<i class="ri-store-line text-secondary ri-3x"></i>
+</div>
+<h3 class="text-xl font-cinzel font-bold text-primary mb-4">Special Events</h3>
+<p class="text-gray-700">Custom menus for weddings and large gatherings</p>
+</div>
+</div>
+<div class="text-center mt-12">
+<button class="bg-secondary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Request Catering</button>
+</div>
+</div>
+</section>
+<section id="contact" class="py-20 bg-primary/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<h2 class="text-3xl font-cinzel font-bold text-primary mb-6">Contact Us</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-map-pin-line text-secondary ri-2x"></i>
+</div>
+<div>
+<h3 class="font-bold text-primary">Address</h3>
+<p class="text-gray-700">123 Manchester Road, Ballwin, St. Louis, MO 63011</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-phone-line text-secondary ri-2x"></i>
+</div>
+<div>
+<h3 class="font-bold text-primary">Phone</h3>
+<p class="text-gray-700">(314) 555-0123</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-time-line text-secondary ri-2x"></i>
+</div>
+<div>
+<h3 class="font-bold text-primary">Hours</h3>
+<p class="text-gray-700">Mon-Sun: 11:00 AM - 10:00 PM</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h3 class="font-bold text-primary mb-4">Follow Us</h3>
+<div class="flex gap-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90">
+<i class="ri-twitter-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-text p-8 rounded-lg shadow-sm overflow-hidden">
+<h3 class="text-xl font-cinzel font-bold text-primary mb-6">Find Us</h3>
+<div class="w-full h-[400px] relative">
+<img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Location Map" class="absolute inset-0 w-full h-full object-cover">
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-primary text-text py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<h3 class="text-2xl font-cinzel font-bold mb-4">Mizan</h3>
+<p class="text-gray-300">Authentic halal pizza crafted with passion and quality ingredients.</p>
+</div>
+<div>
+<h4 class="font-bold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-300 hover:text-white">Menu</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white">Catering</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Contact</h4>
+<ul class="space-y-2">
+<li class="text-gray-300">123 Manchester Road</li>
+<li class="text-gray-300">Ballwin, St. Louis</li>
+<li class="text-gray-300">MO 63011</li>
+<li class="text-gray-300">(314) 555-0123</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Newsletter</h4>
+<p class="text-gray-300 mb-4">Subscribe to get special offers and updates.</p>
+<form class="flex">
+<input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-l focus:outline-none text-gray-900">
+<button type="submit" class="bg-secondary px-4 py-2 rounded-r hover:bg-opacity-90">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-700 mt-12 pt-8 text-center">
+<p class="text-gray-300">&copy; 2025 Mizan. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+document.getElementById('mobile-menu-button').addEventListener('click', function() {
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenu.classList.toggle('hidden');
+if (!mobileMenu.classList.contains('hidden')) {
+mobileMenu.style.transform = 'scaleY(1)';
+} else {
+mobileMenu.style.transform = 'scaleY(0)';
+}
+this.querySelector('i').classList.toggle('ri-menu-line');
+this.querySelector('i').classList.toggle('ri-close-line');
+});
+const scrollLinks = document.querySelectorAll('a[href^="#"]');
+scrollLinks.forEach(link => {
+link.addEventListener('click', (e) => {
+e.preventDefault();
+const id = link.getAttribute('href');
+document.querySelector(id).scrollIntoView({
+behavior: 'smooth'
+});
+if (!link.classList.contains('no-close-menu')) {
+document.getElementById('mobile-menu').classList.add('hidden');
+}
+});
+});
+</script>
+</body>
+</html>
