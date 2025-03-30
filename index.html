@@ -80,7 +80,7 @@ transform: translateY(1px);
 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-cinzel font-bold text-white mb-6">Authentic Halal Pizza, Unmatched Flavor!</h1>
 <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">Experience the perfect blend of authentic flavors and halal ingredients, crafted with passion in the heart of Ballwin Manchester.</p>
 <div class="flex flex-col sm:flex-row justify-center gap-4">
-<button class="bg-secondary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition duration-300 whitespace-nowrap text-lg font-semibold hover:scale-105 hover:shadow-md active:scale-95">Visit Us</button>
+<button id="hero-nav" class="bg-secondary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition duration-300 whitespace-nowrap text-lg font-semibold hover:scale-105 hover:shadow-md active:scale-95">Visit Us</button>
 <button class="bg-white text-primary px-8 py-3 !rounded-button hover:bg-opacity-90 transition duration-300 whitespace-nowrap text-lg font-semibold hover:scale-105 hover:shadow-md active:scale-95" id="view-menu-btn">View Menu</button>
 </div>
 </div>
@@ -745,7 +745,17 @@ targetSection.classList.remove('hidden');
 </div>
 <div>
 <h3 class="font-bold text-primary">Phone</h3>
-<p class="text-gray-700">(636) 254-7585</p>
+<a
+href="tel:+16362547585"
+class="hover:text-secondary transition-colors duration-300 flex items-center"
+>
+(636) 254-7585
+<span
+  class="ml-2 inline-flex items-center justify-center bg-secondary text-white rounded-full w-5 h-5 text-xs"
+>
+  <i class="ri-phone-fill"></i>
+</span>
+</a>
 </div>
 </div>
 <div class="flex items-center gap-4">
@@ -846,6 +856,11 @@ behavior: 'smooth'
 });
 });
 document.getElementById('mobile-nav-order').addEventListener('click', function() {
+document.querySelector('#contact').scrollIntoView({
+behavior: 'smooth'
+});
+});
+document.getElementById('hero-nav').addEventListener('click', function() {
 document.querySelector('#contact').scrollIntoView({
 behavior: 'smooth'
 });
